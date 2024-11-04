@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .appointment-container {
+            width: 400px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="appointment-container">
+        <h2>Book an Appointment</h2>
+        <form action="confirmation.html" method="GET">
+            
+            <div class="form-group">
+                <label for="specialization">Select Specialization</label>
+                <select id="specialization" name="specialization" required>
+                    <option value="" disabled selected>Select Specialization</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Dentist">Dentist</option>
+                    <option value="Dermatologist">Dermatologist</option>
+                </select>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="doctor">Select Doctor</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="dr_smith">Dr. Smith</option>
+                    <option value="dr_jones">Dr. Jones</option>
+                </select>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="date">Select Appointment Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="time">Select Appointment Time</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+</body>
+</html>
