@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .cancel-container {
+            width: 400px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .danger {
+            background-color: #e74c3c;
+        }
+
+        .danger:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cancel-container">
+        <h2>Are you sure you want to cancel your appointment?</h2>
+        <button class="danger" onclick="window.location.href='cancelled.html'">Yes</button>
+
+        <!-- "No" button with appointment details passed as query parameters -->
+        <button id="noButton">No</button>
+    </div>
+
+    <script>
+        // Get the current query parameters (appointment details)
+        const urlParams = new URLSearchParams(window.location.search);
+        const specialization = urlParams.get('specialization');
+        const doctor = urlParams.get('doctor');
+        const date = urlParams.get('date');
+        const time = urlParams.get('time');
+
+        // Redirect to confirmation page with details when "No" is clicked
+        document.getElementById('noButton').onclick = function() {
+            const confirmationUrl = `confirmation.html?specialization=${specialization}&doctor=${doctor}&date=${date}&time=${time}`;
+            window.location.href = confirmationUrl;
+        };
+    </script>
+
+</body>
+</html>

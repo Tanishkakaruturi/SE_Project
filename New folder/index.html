@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDI-CARE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f9fb;
+            color: #333;
+        }
+
+        .container {
+            background-image: url('happy-doctor-holding-clipboard-with-patients.jpg');
+            background-size: cover; /* Cover the entire container */
+            background-position: center; /* Center the image */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 60px;
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            position: relative;
+            height: 100%; /* Ensure the container takes full height */
+            min-height: 500px; /* Set a minimum height */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Darken the background image */
+            z-index: 1;
+            border-radius: 15px;
+        }
+
+        .content {
+            z-index: 2; /* Ensure the content stays above the overlay */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center the content vertically */
+            height: 100%; /* Make sure it takes full height */
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            max-width: 600px;
+            color: #f7f7f7;
+        }
+
+        .buttons {
+            margin-top: 40px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #3498db;
+            border-radius: 8px;
+            margin: 0 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons a:hover {
+            background-color: #2980b9;
+        }
+
+        .contact-btn {
+            background-color: #e74c3c;
+        }
+
+        .contact-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="overlay"></div> 
+        <div class="content">
+            <h1>MEDI-CARE</h1>
+            <p>Skip the queues, book your doctor in just a few clicks</p>
+            <div class="buttons">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
